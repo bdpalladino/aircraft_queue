@@ -6,10 +6,10 @@ A simple aircraft queueing subsystem written using:
 * Sqlite3
 
 To run the application:
-1. clone the repository
-2. from a command line/terminal navigate to the project folder
-3. bundle install --path vendor/bundle
-4. bundle exec rake db:migrate
+  1. clone the repository
+  2. from a command line/terminal navigate to the project folder
+  3. bundle install --path vendor/bundle
+  4. bundle exec rake db:migrate
 
 To start using the application, go to localhost:3000 in your browser. Once you're on the home page, select 'Boot System' to begin. This will list any flights previously queued in the system.
 
