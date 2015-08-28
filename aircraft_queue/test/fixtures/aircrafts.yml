@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  flight_num: MyString
+  type: 
+  size: MyString
+
+two:
+  flight_num: MyString
+  type: 
+  size: MyString

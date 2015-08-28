@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Flight Queues</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Enqueued</th>
+      <th>Flight Number</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flight_queues.each do |flight_queue| %>
+      <tr>
+        <td><%= flight_queue.enqueued %></td>
+        <td><%= flight_queue.aircraft.flight_num %></td>
+        <td><%= flight_queue.aircraft.flight_type %></td>
+        <td><%= flight_queue.aircraft.flight_size %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br/>
+
+<%= button_to "Add New Aircraft to Flight Queue", new_aircraft_path, 
+    :class => "button", :method => :get  %>
+
+<br/>
+
+<%= button_to "Remove Flight From Queue", dequeue_flight_path,
+    :class => "button", :method => :get %>

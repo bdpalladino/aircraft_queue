@@ -1,0 +1,25 @@
+<%= form_for(@flight_queue) do |f| %>
+  <% if @flight_queue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@flight_queue.errors.count, "error") %> prohibited this flight_queue from being saved:</h2>
+
+      <ul>
+      <% @flight_queue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :enqueued %><br>
+    <%= f.datetime_select :enqueued %>
+  </div>
+  <div class="field">
+    <%= f.label :aircraft_id %><br>
+    <%= f.text_field :aircraft_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
